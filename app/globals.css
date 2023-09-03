@@ -2,26 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 900;
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Black.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 900;
+    font-style: italic;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-BlackItalic.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Bold.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-style: italic;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-BoldItalic.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 800;
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Extrabold.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 800;
+    font-style: italic;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-ExtraboldItalic.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 800; /* Assuming Heavy as 800, adjust if needed */
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Heavy.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 800; /* Assuming HeavyItalic as 800, adjust if needed */
+    font-style: italic;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-HeavyItalic.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Light.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-style: italic;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-LightItalic.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Medium.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-style: italic;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-MediumItalic.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Regular.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-style: italic;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-RegularItalic.otf");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 600;
+    font-style: normal;
+    src: url("https://cdn.re-search.io/fonts/gilroy/Gilroy-Semibold.otf");
+}
+
+/* Add other fonts in a similar fashion if needed */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
 }

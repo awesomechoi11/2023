@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+        config.module.rules.push({
+            test: /\.(vert|frag)$/, // This regex matches both .vs and .fs files
+            use: "raw-loader",
+        });
 
-module.exports = nextConfig
+        return config;
+    },
+};
+
+module.exports = nextConfig;
