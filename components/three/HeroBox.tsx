@@ -1,8 +1,8 @@
 "use client"; // This is a client component 👈🏽
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import vert from "./spline/vert.vert";
-import frag from "./spline/frag.frag";
+import vert from "./gradient/vert.vert";
+import frag from "./gradient/frag.frag";
 import { useRef } from "react";
 import { getProject } from "@theatre/core";
 // import { SheetProvider } from "@theatre/r3f";
@@ -44,7 +44,7 @@ function Box() {
     useFrame(({ clock }) => {
         if (boxRef.current) {
             boxRef.current.material.uniforms.u_time.value =
-                clock.oldTime * 0.001;
+                clock.oldTime * 0.01;
         }
     });
     // const EditablePlane = e(Plane, "plane");
