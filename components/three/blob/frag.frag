@@ -4,8 +4,10 @@ uniform int u_pcount;
 uniform float u_ppos[30 * 2];
 uniform float u_pspos[30 * 2];
 uniform float u_aspect;
-uniform vec2 u_center;
 uniform float u_upperBound;
+uniform sampler2D u_noise1;
+uniform bool u_wobbling;
+uniform float u_centerWobbleFactor;
 // Simplex 2D noise
 //
 vec3 permute(vec3 x) {
@@ -52,7 +54,15 @@ void main() {
   uv.x *= u_aspect;
   vec4 color = vec4(0.);
 
-  float sdf = sdCircle(vec2(0.), uv, 150.1);
+  // center circle
+  float sdf;
+  if(u_wobbling) {
+    // float uvNoise = texture2D(u_noise1, vec2(mod(vUv.x + u_time * 0.05, 1.), mod(vUv.y + u_time * 0.05, 1.))).x * u_centerWobbleFactor;
+    float uvNoise = snoise(vUv * u_centerWobbleFactor + u_time * 0.15) * u_centerWobbleFactor;
+    sdf = sdCircle(vec2(0.), uv, 150.1 + uvNoise);
+  } else {
+    sdf = sdCircle(vec2(0.), uv, 150.1);
+  }
 
   for(int i = 0; i < u_pcount; i += 2) {
 
@@ -62,13 +72,10 @@ void main() {
       position[j] = u_ppos[i + j];
       startPos[j] = u_pspos[i + j];
     }
-    float radius = smoothstep(0., 300., min(distance(startPos, position) * 0.3, 10. * distance(vec2(0.), position)));
+    float radius = smoothstep(0., 100., min(distance(startPos, position) / 7.3, 10. * distance(vec2(0.), position)));
     float sdfCircle = sdCircle(position, uv, radius * 27.);
-    // if(sdf == 0.) {
-    //   sdf = sdfCircle;
-    // } else {
+
     sdf = smin(sdf, sdfCircle, 0.1 * u_upperBound * radius);
-    // }
   }
   if(sdf < 0.) {
     color = vec4(0.7784 + 0.7184 * sin(3.1384 + u_time + snoise(uv / 0.3 / u_upperBound + u_time * 0.07)) * sin(uv.x / u_upperBound + u_time * 0.2), 0.7784 + 0.1384 * sin(2.6776 + u_time + snoise(uv / 0.7 / u_upperBound + (u_time * 0.03))), 0.8514 + 0.2284 * sin(30.818 + u_time + snoise(uv / 0.2 / u_upperBound + u_time * 0.02)), 1.0);

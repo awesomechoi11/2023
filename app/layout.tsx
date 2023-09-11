@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -14,6 +15,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="h-screen overflow-hidden">
+            <Head>
+                <link rel="icon" href="/favicon.ico" sizes="any" />
+            </Head>
             <body className="h-screen bg-black pb-3 relative overflow-hidden">
                 {children}
             </body>
