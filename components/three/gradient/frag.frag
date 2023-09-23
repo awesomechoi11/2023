@@ -1,8 +1,5 @@
 varying vec2 vUv;
 uniform float u_time;
-uniform int u_pcount;
-uniform float u_ppos[30 * 2];
-uniform float u_pspos[30 * 2];
 uniform float u_aspect;
 uniform float u_width;
 uniform float u_height;
@@ -10,7 +7,7 @@ uniform float u_centerRadius;
 uniform float u_barX;
 uniform float u_barSkew;
 uniform float u_barHeight;
-
+uniform sampler2D u_trailTexture;
 // Simplex 2D noise
 //
 vec3 permute(vec3 x) {
@@ -73,40 +70,23 @@ float screenScale(float val) {
 void main() {
   vec2 uv = (vec2(vUv.x, vUv.y) - vec2(0.5)) * vec2(u_width, u_height);
   // uv.y /= u_aspect;
-
-  vec4 color = vec4(0.);
+  // uv += displace * 10.;
+  float displace = texture2D(u_trailTexture, vUv).r;
+  float displaceAmount = sin(displace * 10.) * 0.5 + 0.5;
+  uv += displaceAmount * 50.;
 
   float r = 0.7784 + 0.7184 * sin(3.1384 + u_time + snoise(uv / 0.09 / u_width + u_time * 0.07)) * sin(uv.x / u_width + u_time * 0.2);
   float g = 0.7784 + 0.1384 * sin(2.6776 + u_time + snoise(uv / 0.29 / u_width + (u_time * 0.03)));
   float b = 0.8514 + 0.2284 * sin(30.818 + u_time + snoise(uv / 0.09 / u_width + u_time * 0.02));
-  float rNoise = max(r, b) * (40.) + 25.;
-  float sdf = 0.;
+  vec4 grad = vec4(r, g, b, 1.);
+  vec4 black = vec4(0.);
+  vec4 color = mix(grad, black, displaceAmount * 0.1);
+
+  // float rNoise = max(r, b) * (40.) + 25.;
+  // float sdf = 0.;
 
   // center circle
-  sdf = sdCircle(vec2(0.), uv, u_centerRadius + rNoise * min(u_centerRadius, 1.)) + 500. * smoothstep(0., 75., -u_centerRadius + 75.);
-
-  // center bar
-  sdf = smin(sdf, sdParallelogram(vec2(u_barX, 0.) - uv, screenScale(10.), u_barHeight, u_barSkew), 0.1 * u_width);
-
-  // outer circles
-  for(int i = 0; i < u_pcount; i += 2) {
-
-    vec2 position = vec2(0.);
-    vec2 startPos = vec2(0.);
-    for(int j = 0; j < 2; j++) {
-      position[j] = u_ppos[i + j];
-      startPos[j] = u_pspos[i + j];
-    }
-    float radius = smoothstep(0., 100., min(distance(startPos, position) / 7.3, 1.5 * distance(vec2(0.), position)));
-    float sdfCircle = sdCircle(position, uv, radius * 27.);
-
-    sdf = smin(sdf, sdfCircle, 0.1 * u_width * radius);
-  }
-
-  if(sdf < 0.) {
-    // color = vec4(r, g, b, smoothstep(-0.01, 0., sdf));
-    color = vec4(r, g, b, 1.);
-  }
+  // sdf = sdCircle(vec2(0.), uv, u_centerRadius + rNoise * min(u_centerRadius, 1.)) + 500. * smoothstep(0., 75., -u_centerRadius + 75.);
 
   gl_FragColor = color;
 }

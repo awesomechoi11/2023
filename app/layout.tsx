@@ -18,7 +18,7 @@ export default function RootLayout({
             <Head>
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </Head>
-            <body className="h-screen bg-black pb-3 relative overflow-hidden">
+            <body className="h-screen bg-black relative overflow-hidden">
                 {children}
             </body>
         </html>
