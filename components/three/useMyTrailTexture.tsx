@@ -37,7 +37,7 @@ type TrailConfig = {
 } & { width?: number; height?: number };
 
 // smooth new sample (measurement) based on previous sample (current)
-function smoothAverage(current, measurement, smoothing = 0.9) {
+function smoothAverage(current: any, measurement: any, smoothing = 0.9) {
     return measurement * smoothing + current * (1.0 - smoothing);
 }
 
@@ -105,7 +105,7 @@ class TrailTexture {
             this.canvas.style.height = `${this.canvas.width}px`;
     }
 
-    update(delta) {
+    update(delta: any) {
         this.clear();
 
         // age points
@@ -133,7 +133,7 @@ class TrailTexture {
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     }
 
-    addTouch(point) {
+    addTouch(point: any) {
         const last = this.trail[this.trail.length - 1];
 
         if (last) {
@@ -165,7 +165,7 @@ class TrailTexture {
         this.trail.push({ x: point.x, y: point.y, age: 0, force: this.force });
     }
 
-    drawTouch(point) {
+    drawTouch(point: any) {
         const pos = {
             x: point.x * this.width,
             y: (1 - point.y) * this.height,
@@ -206,7 +206,7 @@ class TrailTexture {
 
 export function useMyTrailTexture(
     config: Partial<TrailConfig> = {}
-): [Texture, (ThreeEvent) => void] {
+): [Texture, (ThreeEvent: ThreeEvent<{}>) => void] {
     const {
         maxAge,
         radius,
@@ -235,6 +235,6 @@ export function useMyTrailTexture(
         ]
     );
     useFrame((_, delta) => void trail.update(delta));
-    const onMove = useCallback((e) => trail.addTouch(e.uv), [trail]);
+    const onMove = useCallback((e: any) => trail.addTouch(e.uv), [trail]);
     return [trail.texture, onMove];
 }
