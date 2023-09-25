@@ -24,7 +24,7 @@ export default function RootLayout({
         />
         <meta property="og:title" content="bmschoi - portfolio - 2023" />
         <meta property="og:description" content="bmschoi - portfolio - 2023" />
-        <meta property="og:image" content="/android-chrome-512x512.png" />
+        <meta property="og:image" content="/seo.png" />
       </Head>
       <body className="h-screen bg-black relative overflow-hidden">
         {children}
