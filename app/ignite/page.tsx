@@ -173,8 +173,8 @@ export default function Ignite() {
                 <div className="max-w-sm">
                   <div className="font-bold mb-6">Typography</div>
                   <div>
-                    A modern, sleek typeface that's easy on the eyes, ensuring
-                    readability across devices.
+                    A modern, sleek typeface that&apos;s easy on the eyes,
+                    ensuring readability across devices.
                   </div>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
