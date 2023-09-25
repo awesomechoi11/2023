@@ -23,8 +23,18 @@ export default function RootLayout({
           key="desc"
         />
         <meta property="og:title" content="bmschoi - portfolio - 2023" />
-        <meta property="og:description" content="bmschoi - portfolio - 2023" />
+        <meta property="og:description" content="front end developer" />
         <meta property="og:image" content="/seo.png" />
+        <meta property="twitter:image" content="/seo.png"></meta>
+        <meta property="twitter:card" content="/seo.png"></meta>
+        <meta
+          property="twitter:title"
+          content="bmschoi - portfolio - 2023"
+        ></meta>
+        <meta
+          property="twitter:description"
+          content="front end developer"
+        ></meta>
       </Head>
       <body className="h-screen bg-black relative overflow-hidden">
         {children}
