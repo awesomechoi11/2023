@@ -21,24 +21,18 @@ export default function Works() {
         >
           Selected Works
         </div>
-      </FadeInDiv>{" "}
+      </FadeInDiv>
       <FlippableCase
         fontScale={351}
         text="seaswap"
         bannerSrc="/seaswapbanner.png"
         href={"/seaswap"}
-      />{" "}
+      />
       <FlippableCase
         fontScale={395}
         text="paymint"
         bannerSrc="/paymintbanner.png"
         href={"/paymint"}
-      />
-      <FlippableCase
-        fontScale={200}
-        text="cashout kings"
-        bannerSrc="/cashoutkingsbanner.png"
-        href={"/cashoutkings"}
       />
       <FlippableCase
         fontScale={205}
@@ -47,10 +41,18 @@ export default function Works() {
         href={"/ignite"}
       />
       <FlippableCase
+        fontScale={200}
+        text="cashout kings"
+        bannerSrc="/cashoutkingsbanner.png"
+        href={"/cashoutkings"}
+        disabled
+      />
+      <FlippableCase
         fontScale={290}
         text="coin pilot"
         bannerSrc="/coinpilotbanner.png"
         href={"/coinpilot"}
+        disabled
       />
     </div>
   );
@@ -61,11 +63,13 @@ const FlippableCase = ({
   bannerSrc,
   text,
   href,
+  disabled = false,
 }: {
   fontScale: number;
   bannerSrc: string;
   text: string;
   href: string;
+  disabled?: boolean;
 }) => {
   return (
     <FadeInDiv className="mb-32 max-[1224px]:mb-24 max-[624px]:mb-12 pt-16 h-[500px] max-[1224px]:h-[400px] max-[624px]:h-[300px] max-[424px]:h-[250px] relative">
@@ -73,12 +77,13 @@ const FlippableCase = ({
         style={{
           transformStyle: "preserve-3d",
           perspective: "4020px",
+          cursor: disabled ? "not-allowed" : "pointer",
         }}
-        className="w-full z-[1] absolute inset-0 cursor-pointer"
+        className="w-full z-[1] absolute inset-0 "
         initial="hidden"
         whileHover="flipped"
       >
-        <Link href={href} className="absolute inset-0"></Link>
+        <Link href={disabled ? "#" : href} className="absolute inset-0"></Link>
         <motion.div
           style={{
             backfaceVisibility: "hidden",
@@ -124,6 +129,7 @@ const FlippableCase = ({
           style={{
             fontSize: `${relativePercent(205)}vw`,
             backfaceVisibility: "hidden",
+            background: "black",
           }}
           variants={{
             hidden: {
@@ -143,13 +149,25 @@ const FlippableCase = ({
           }}
           className="text-white absolute pointer-events-none inset-0 text-center font-bold font-['Gilroy'] uppercase"
         >
+          {disabled && (
+            <div className="absolute inset-0 flex justify-center items-center">
+              <div
+                className=" text-center font-bold font-['Gilroy'] uppercase"
+                style={{
+                  fontSize: `${relativePercent(160)}vw`,
+                }}
+              >
+                coming soon
+              </div>
+            </div>
+          )}
           <Image
             width={1920}
             height={520}
-            alt="ignite hosting banner"
+            alt={`${text} banner`}
             src={bannerSrc}
             className="absolute inset-0 max-h-[100%]"
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain", opacity: disabled ? "24%" : "100%" }}
             priority
           />
         </motion.div>

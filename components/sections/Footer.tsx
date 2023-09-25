@@ -1,11 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button";
 import FadeInDiv from "../FadeInDiv";
 import { email_svg, github_svg, linkedin_svg } from "../svg/socials";
 import FooterCanvas from "../three/FooterCanvas";
 import { relativePercent } from "../utils/math";
+import { useRef } from "react";
 
 const childVariants = {
   hidden: {
@@ -26,9 +27,10 @@ const childVariants = {
 
 export default function Footer() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-
+  const ref = useRef(null);
+  const inView = useInView(ref);
   return (
-    <div>
+    <div ref={ref}>
       <div className="max-w-[1680px] mx-auto px-6 mb-6">
         <div className="flex gap-52 mb-12 max-[1224px]:gap-24 max-[1224px]:flex-col">
           <div
@@ -90,6 +92,7 @@ export default function Footer() {
               "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5060224773503151) 36%, rgba(0,0,0,0.2595238779105392) 65%, rgba(0,0,0,0) 100%)",
           }}
         />
+
         <FooterCanvas />
       </div>
     </div>

@@ -1,5 +1,7 @@
+"use client";
 import Image, { ImageProps } from "next/image";
 import FadeInDiv from "../FadeInDiv";
+import { useState } from "react";
 
 export default function FadeInImage({
   customIndex = 0,
@@ -10,8 +12,11 @@ export default function FadeInImage({
 }: ImageProps & {
   customIndex?: number;
 }) {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <FadeInDiv
+      show={loaded}
       animate={{
         opacity: 1,
         y: 0,
@@ -23,7 +28,7 @@ export default function FadeInImage({
       }}
       className={className}
     >
-      <Image {...props} alt={alt} src={src} />
+      <Image {...props} alt={alt} src={src} onLoad={() => setLoaded(true)} />
     </FadeInDiv>
   );
 }

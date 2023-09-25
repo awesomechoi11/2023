@@ -1,8 +1,6 @@
-import HomeMain from "@/components/home/HomeMain";
 import Navbar from "@/components/navbar/Navbar";
 import FadeInImage from "@/components/pages/FadeInImage";
 import Footer from "@/components/sections/Footer";
-import MainCanvas from "@/components/three/MainCanvas";
 import Image from "next/image";
 
 export default function Ignite() {
@@ -155,16 +153,17 @@ export default function Ignite() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Logo Design</div>
+                  <div className="font-bold mb-6">Color Palette</div>
                   <div>
-                    Crafting a simple yet memorable logo that conveyed the
-                    essence of ignition and innovation.
+                    A blend of fiery reds and oranges combined with cooler blues
+                    and greys to convey passion, reliability, and technical
+                    prowess.
                   </div>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
                     src="/ignite/colors.png"
-                    alt="ignite color pallete"
+                    alt="ignite color palette"
                     width={396}
                     height={60}
                   />
@@ -172,10 +171,10 @@ export default function Ignite() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Logo Design</div>
+                  <div className="font-bold mb-6">Typography</div>
                   <div>
-                    Crafting a simple yet memorable logo that conveyed the
-                    essence of ignition and innovation.
+                    A modern, sleek typeface that's easy on the eyes, ensuring
+                    readability across devices.
                   </div>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
@@ -193,12 +192,14 @@ export default function Ignite() {
           <div className="px-4 mb-32 flex flex-col lg:px-14 lg:mx-auto max-w-[1500px] items-center lg:items-start">
             <div className="max-w-md mb-32">
               <div className="font-bold uppercase flex flex-col mb-6">
-                Discovery & Research
+                UI Design
                 <div className="border-b w-[45px] border-b-white" />
               </div>
               <div>
-                The initial phase involved deep market research to understand
-                the gaps in existing services and the needs of potential users.
+                With my technical knowledge and passion for motion and
+                interaction, I am able to develop a versatile and lasting
+                codebase. In my code, I make sure to express my passions to its
+                fullest extent.
               </div>
             </div>
             <div className="flex flex-col gap-4 items-center">
