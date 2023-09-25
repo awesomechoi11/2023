@@ -20,7 +20,7 @@ export default function Ignite() {
               priority
             />
             <div className="absolute inset-0 flex justify-center items-center">
-              <div className="font-bold uppercase text-[54px] lg:text-[110px]">
+              <div className="font-bold uppercase text-[32px] lg:text-[110px] sm:text-[54px]">
                 ignite hosting
               </div>
             </div>
