@@ -39,7 +39,7 @@ export default function Paymint() {
                 Paymint is a groundbreaking cryptocurrency API service designed
                 to provide users with secure and rapid transaction forwarding to
                 their wallets. This case study primarily explores the challenges
-                faced during the development of Paymint's homepage and
+                faced during the development of Paymint&apos;s homepage and
                 documentation, highlighting the research and design process that
                 resulted in a user-friendly solution for cryptocurrency
                 enthusiasts.
@@ -94,9 +94,9 @@ export default function Paymint() {
                 </div>
                 <div>
                   The core objective of Paymint was to provide near-instant
-                  cryptocurrency transaction forwarding, making the design's
-                  performance and responsiveness key factors for user
-                  satisfaction.
+                  cryptocurrency transaction forwarding, making the
+                  design&apos;s performance and responsiveness key factors for
+                  user satisfaction.
                 </div>
               </div>
               <div className="flex flex-col items-center max-w-[340px]">
@@ -132,7 +132,7 @@ export default function Paymint() {
                 <div className="border-b w-[45px] border-b-white" />
               </div>
               <div>
-                Understanding Paymint's core values and objectives was
+                Understanding Paymint&apos;s core values and objectives was
                 instrumental in creating an effective design for both the
                 homepage and documentation.
               </div>
@@ -142,8 +142,9 @@ export default function Paymint() {
                 <div className="max-w-sm">
                   <div className="font-bold mb-6">Logo Design</div>
                   <div>
-                    The logo's elements were chosen to convey trust, security,
-                    and forward movement, aligning with Paymint's values.
+                    The logo&apos;s elements were chosen to convey trust,
+                    security, and forward movement, aligning with Paymint&apos;s
+                    values.
                   </div>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
@@ -203,7 +204,7 @@ export default function Paymint() {
               <div>
                 In conclusion, my role in the Paymint project focused on the
                 UI/UX design for the homepage and documentation, which
-                contributed to conveying Paymint's values while simplifying
+                contributed to conveying Paymint&apos;s values while simplifying
                 complex cryptocurrency processes for users.
               </div>
             </div>

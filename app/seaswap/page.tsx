@@ -39,11 +39,11 @@ export default function Seaswap() {
                 SeaSwap, a secure NFT swapping platform, is dedicated to
                 providing users with a safe and intuitive environment for
                 trading non-fungible tokens (NFTs). This case study delves into
-                the design elements that define SeaSwap's unique identity,
+                the design elements that define SeaSwap&apos;s unique identity,
                 emphasizing the primary color scheme of white and blue, subtle
                 ocean wave accents, and the selection of fonts - Gilroy and SF
                 Mono. The pivotal role of the design team in shaping the
-                platform's user experience is central to this discussion.{" "}
+                platform&apos;s user experience is central to this discussion.{" "}
               </div>
             </div>
           </div>
@@ -140,8 +140,9 @@ export default function Seaswap() {
                 and maintaining a cohesive visual identity with the chosen white
                 and blue color scheme and subtle ocean wave accents.
                 Additionally, user-centered design principles, clear navigation,
-                and robust security features are crucial to meet the platform's
-                objectives of simplicity, security, and user trust.
+                and robust security features are crucial to meet the
+                platform&apos;s objectives of simplicity, security, and user
+                trust.
               </div>
             </div>
             <div className="flex flex-col gap-32 ">
@@ -149,12 +150,12 @@ export default function Seaswap() {
                 <div className="max-w-sm">
                   <div className="font-bold mb-6">Logo Design</div>
                   <div>
-                    The logo's elements were chosen to convey trust, security,
-                    and forward movement, aligning with seaswap's values. Ocean
-                    wave accents are tastefully integrated into specific design
-                    elements, providing a cohesive and visually pleasing
-                    identity that resonates with the platform's theme without
-                    overwhelming the user interface.
+                    The logo&apos;s elements were chosen to convey trust,
+                    security, and forward movement, aligning with seaswap&apos;s
+                    values. Ocean wave accents are tastefully integrated into
+                    specific design elements, providing a cohesive and visually
+                    pleasing identity that resonates with the platform&apos;s
+                    theme without overwhelming the user interface.
                   </div>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
@@ -171,9 +172,9 @@ export default function Seaswap() {
                   <div className="font-bold mb-6">Color Palette</div>
                   <div>
                     White is the predominant color, symbolizing transparency and
-                    trust, reflecting SeaSwap's commitment to security. The
+                    trust, reflecting SeaSwap&apos;s commitment to security. The
                     primary blue color represents reliability and calmness,
-                    aligning with the platform's ocean-themed identity.
+                    aligning with the platform&apos;s ocean-themed identity.
                   </div>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
@@ -216,7 +217,7 @@ export default function Seaswap() {
               <div>
                 In conclusion, my role in the seaswap project focused on the
                 UI/UX design for the homepage and documentation, which
-                contributed to conveying seaswap's values while simplifying
+                contributed to conveying seaswap&apos;s values while simplifying
                 complex cryptocurrency processes for users.
               </div>
             </div>
