@@ -136,8 +136,11 @@ body {
             rgb(var(--background-end-rgb))
         )
         rgb(var(--background-start-rgb));
+       
 }
-
+body > div{
+    scroll-behavior: smooth;
+}
 html.lenis {
     height: auto;
 }

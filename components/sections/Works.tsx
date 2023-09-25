@@ -11,7 +11,7 @@ export default function Works() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
-    <div className="px-6 mx-auto max-w-[1600px] relative z-0">
+    <div id="works" className="px-6 mx-auto max-w-[1600px] relative z-0">
       <FadeInDiv className="mb-32 mt-32 transform-gpu relative">
         <div
           style={{
@@ -72,7 +72,7 @@ const FlippableCase = ({
   disabled?: boolean;
 }) => {
   return (
-    <FadeInDiv className="mb-32 max-[1224px]:mb-24 max-[624px]:mb-12 pt-16 h-[500px] max-[1224px]:h-[400px] max-[624px]:h-[300px] max-[424px]:h-[250px] relative">
+    <FadeInDiv className="mb-32 max-[1224px]:mb-24 max-[624px]:mb-12 pt-16 h-[400px] max-[1224px]:h-[400px] max-[624px]:h-[300px] max-[424px]:h-[250px] relative">
       <motion.div
         style={{
           transformStyle: "preserve-3d",

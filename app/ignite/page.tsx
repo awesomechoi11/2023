@@ -196,10 +196,10 @@ export default function Ignite() {
                 <div className="border-b w-[45px] border-b-white" />
               </div>
               <div>
-                With my technical knowledge and passion for motion and
-                interaction, I am able to develop a versatile and lasting
-                codebase. In my code, I make sure to express my passions to its
-                fullest extent.
+                Starting with low-fidelity mockups, ideas were tested and
+                iterated upon to form the blueprint of the final design.
+                Ensuring the platform&apos;s adaptability across devices,
+                especially mobile, considering the increasing mobile user base.
               </div>
             </div>
             <div className="flex flex-col gap-4 items-center">

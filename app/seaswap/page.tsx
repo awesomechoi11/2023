@@ -150,12 +150,10 @@ export default function Seaswap() {
                 <div className="max-w-sm">
                   <div className="font-bold mb-6">Logo Design</div>
                   <div>
-                    The logo&apos;s elements were chosen to convey trust,
-                    security, and forward movement, aligning with seaswap&apos;s
-                    values. Ocean wave accents are tastefully integrated into
-                    specific design elements, providing a cohesive and visually
-                    pleasing identity that resonates with the platform&apos;s
-                    theme without overwhelming the user interface.
+                    Ocean wave accents are tastefully integrated into specific
+                    design elements, providing a cohesive and visually pleasing
+                    identity that resonates with the platform&apos;s theme
+                    without overwhelming the user interface.
                   </div>
                 </div>
                 <div className="border rounded-3xl border-white p-6">

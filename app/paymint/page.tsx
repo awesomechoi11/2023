@@ -203,9 +203,9 @@ export default function Paymint() {
               </div>
               <div>
                 In conclusion, my role in the Paymint project focused on the
-                UI/UX design for the homepage and documentation, which
-                contributed to conveying Paymint&apos;s values while simplifying
-                complex cryptocurrency processes for users.
+                UI/UX design and development for the homepage and documentation,
+                which contributed to conveying Paymint&apos;s values while
+                simplifying complex cryptocurrency processes for users.
               </div>
             </div>
             <div className="flex flex-col gap-4 items-center w-full">

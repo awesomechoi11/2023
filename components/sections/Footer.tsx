@@ -7,6 +7,7 @@ import { email_svg, github_svg, linkedin_svg } from "../svg/socials";
 import FooterCanvas from "../three/FooterCanvas";
 import { relativePercent } from "../utils/math";
 import { useRef } from "react";
+import Link from "next/link";
 
 const childVariants = {
   hidden: {
@@ -47,7 +48,9 @@ export default function Footer() {
           <div>
             <FadeInDiv className="mb-4 font-bold text-xl">Contact</FadeInDiv>
             <FadeInDiv className="text-xl sm:text-2xl">
-              brandonchoi2016@gmail.com
+              <Link href="mailto:brandonchoi2015@gmail.com">
+                brandonchoi2016@gmail.com
+              </Link>
             </FadeInDiv>
           </div>
         </div>
