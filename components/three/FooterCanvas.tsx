@@ -13,8 +13,14 @@ import { useMyTrailTexture } from "./useMyTrailTexture";
 export default function FooterCanvas() {
   return (
     <div
-      className="w-full h-full overflow-hidden inline-block"
+      className="w-full h-full overflow-hidden inline-block select-none touch-none"
       style={{ pointerEvents: "none" }}
+      onTouchMove={(e) => {
+        e.preventDefault();
+      }}
+      onTouchStart={(e) => {
+        e.preventDefault();
+      }}
     >
       <Canvas className="w-full h-full">
         <ambientLight intensity={0.1} />

@@ -27,7 +27,7 @@ export default function Ignite() {
           </div>
 
           {/* WIP banner */}
-          <div className="flex flex-col gap-3 text-black bg-white py-5 items-center mb-32">
+          <div className="flex flex-col gap-3 text-black bg-white py-5 items-center mb-32 px-4 text-center">
             <div className="font-bold">Work In Progress</div>
             <div>Comprehensive case study coming soon</div>
           </div>

@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
           <div>
             <FadeInDiv className="mb-4 font-bold text-xl">Contact</FadeInDiv>
-            <FadeInDiv className="text-2xl">
+            <FadeInDiv className="text-xl sm:text-2xl">
               brandonchoi2016@gmail.com
             </FadeInDiv>
           </div>

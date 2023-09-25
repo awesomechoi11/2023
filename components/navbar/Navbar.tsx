@@ -29,7 +29,7 @@ export default function Navbar() {
         staggerChildren: 0.1,
         ease: [0.13, 0.64, 0.26, 0.99],
       }}
-      className="bg-transparent pointer-events-none w-full pt-[45px] pb-[25px] flex justify-between  px-4 lg:px-[140px] text-[16px] font-bold absolute top-0"
+      className="bg-transparent pointer-events-none w-full pt-4 lg:pt-[45px] pb-[25px]  items-center flex justify-between  px-4 lg:px-[140px] text-[16px] font-bold absolute top-0"
     >
       <motion.div
         className="pointer-events-auto"
