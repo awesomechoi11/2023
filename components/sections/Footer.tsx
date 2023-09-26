@@ -61,9 +61,11 @@ export default function Footer() {
             custom={0}
             variants={childVariants}
           >
-            <Button paddingType="sym" themeType="light">
-              {github_svg}
-            </Button>
+            <Link href="https://github.com/awesomechoi11">
+              <Button paddingType="sym" themeType="light">
+                {github_svg}
+              </Button>
+            </Link>
           </motion.span>
           <motion.span
             initial="hidden"
@@ -71,9 +73,11 @@ export default function Footer() {
             custom={1}
             variants={childVariants}
           >
-            <Button paddingType="sym" themeType="light">
-              {linkedin_svg}
-            </Button>
+            <Link href="https://www.linkedin.com/in/bmschoi/">
+              <Button paddingType="sym" themeType="light">
+                {linkedin_svg}
+              </Button>
+            </Link>
           </motion.span>{" "}
           <motion.span
             initial="hidden"
@@ -81,9 +85,11 @@ export default function Footer() {
             custom={2}
             variants={childVariants}
           >
-            <Button paddingType="sym" themeType="light">
-              {email_svg}
-            </Button>
+            <Link href="mailto:brandonchoi2015@gmail.com">
+              <Button paddingType="sym" themeType="light">
+                {email_svg}
+              </Button>
+            </Link>
           </motion.span>
         </div>
       </div>
