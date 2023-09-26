@@ -3,6 +3,16 @@ import FadeInImage from "@/components/pages/FadeInImage";
 import Footer from "@/components/sections/Footer";
 import Image from "next/image";
 
+export const metadata = {
+  twitter: {
+    card: "summary_large_image",
+    title: "BMSCHOI - 2023 Portfolio",
+    description: "Front-End Developer Portfolio for 2023.",
+    creator: "@bmschoidev",
+    images: ["/igniteseo.png"],
+  },
+};
+
 export default function Ignite() {
   return (
     <>
