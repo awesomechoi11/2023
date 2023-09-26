@@ -1,3 +1,4 @@
+import FadeInDiv from "@/components/FadeInDiv";
 import Navbar from "@/components/navbar/Navbar";
 import FadeInImage from "@/components/pages/FadeInImage";
 import Footer from "@/components/sections/Footer";
@@ -30,9 +31,9 @@ export default function Seaswap() {
               priority
             />
             <div className="absolute inset-0 flex justify-center items-center">
-              <div className="font-bold uppercase text-[54px] lg:text-[110px]">
+              <FadeInDiv className="font-bold uppercase text-[54px] lg:text-[110px]">
                 seaswap
-              </div>
+              </FadeInDiv>
             </div>
           </div>
 
@@ -63,7 +64,7 @@ export default function Seaswap() {
               <div className="border-b w-[45px] border-b-black" />
             </div>
             <div className="flex gap-16 flex-col lg:flex-row text-center">
-              <div className="flex flex-col items-center max-w-[340px]">
+              <FadeInDiv className="flex flex-col items-center max-w-[340px]">
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="27"
@@ -85,8 +86,11 @@ export default function Seaswap() {
                   the process of creating, buying, and swapping NFTs while
                   maintaining security is a significant UX challenge.
                 </div>
-              </div>
-              <div className="flex flex-col items-center max-w-[340px]">
+              </FadeInDiv>
+              <FadeInDiv
+                delayFactor={1}
+                className="flex flex-col items-center max-w-[340px]"
+              >
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="27"
@@ -108,8 +112,11 @@ export default function Seaswap() {
                   while keeping the onboarding process user-friendly and
                   informative can be challenging.
                 </div>
-              </div>
-              <div className="flex flex-col items-center max-w-[340px]">
+              </FadeInDiv>
+              <FadeInDiv
+                delayFactor={2}
+                className="flex flex-col items-center max-w-[340px]"
+              >
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="26"
@@ -131,17 +138,17 @@ export default function Seaswap() {
                   devices, given the diversity of the user base, requires
                   careful design and development.
                 </div>
-              </div>
+              </FadeInDiv>
             </div>
           </div>
           {/* discovery & research */}
           <div className="px-4 mb-32 flex flex-col lg:px-14 lg:mx-auto max-w-[1500px] items-center lg:items-start">
             <div className="max-w-md mb-32">
-              <div className="font-bold uppercase flex flex-col mb-6">
+              <FadeInDiv className="font-bold uppercase flex flex-col mb-6">
                 Discovery & Research
                 <div className="border-b w-[45px] border-b-white" />
-              </div>
-              <div>
+              </FadeInDiv>
+              <FadeInDiv delayFactor={1}>
                 For SeaSwap, a secure NFT swapping platform, the UI/UX needs
                 primarily revolve around creating a seamless and user-friendly
                 experience. This entails designing an intuitive interface that
@@ -153,18 +160,18 @@ export default function Seaswap() {
                 and robust security features are crucial to meet the
                 platform&apos;s objectives of simplicity, security, and user
                 trust.
-              </div>
+              </FadeInDiv>
             </div>
             <div className="flex flex-col gap-32 ">
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Logo Design</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">Logo Design</FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     Ocean wave accents are tastefully integrated into specific
                     design elements, providing a cohesive and visually pleasing
                     identity that resonates with the platform&apos;s theme
                     without overwhelming the user interface.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -177,13 +184,15 @@ export default function Seaswap() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Color Palette</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">
+                    Color Palette
+                  </FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     White is the predominant color, symbolizing transparency and
                     trust, reflecting SeaSwap&apos;s commitment to security. The
                     primary blue color represents reliability and calmness,
                     aligning with the platform&apos;s ocean-themed identity.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -196,13 +205,13 @@ export default function Seaswap() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Typography</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">Typography</FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     Chosen for its modern and clean aesthetic, Gilroy enhances
                     readability and adds a contemporary touch to the design. SF
                     Mono ensures a consistent presentation of vital information
                     within the platform.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -218,16 +227,16 @@ export default function Seaswap() {
           {/* ui design */}
           <div className="px-4 mb-32 flex flex-col lg:px-14 lg:mx-auto max-w-[1500px] items-center lg:items-start">
             <div className="max-w-md mb-32">
-              <div className="font-bold uppercase flex flex-col mb-6">
+              <FadeInDiv className="font-bold uppercase flex flex-col mb-6">
                 UI Design
                 <div className="border-b w-[45px] border-b-white" />
-              </div>
-              <div>
+              </FadeInDiv>
+              <FadeInDiv delayFactor={1}>
                 In conclusion, my role in the seaswap project focused on the
                 UI/UX design for the homepage and documentation, which
                 contributed to conveying seaswap&apos;s values while simplifying
                 complex cryptocurrency processes for users.
-              </div>
+              </FadeInDiv>
             </div>
             <div className="flex flex-col gap-4 items-center w-full">
               <FadeInImage

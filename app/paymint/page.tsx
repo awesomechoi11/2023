@@ -1,3 +1,4 @@
+import FadeInDiv from "@/components/FadeInDiv";
 import Navbar from "@/components/navbar/Navbar";
 import FadeInImage from "@/components/pages/FadeInImage";
 import Footer from "@/components/sections/Footer";
@@ -30,9 +31,9 @@ export default function Paymint() {
               priority
             />
             <div className="absolute inset-0 flex justify-center items-center">
-              <div className="font-bold uppercase text-[54px] lg:text-[110px]">
+              <FadeInDiv className="font-bold uppercase text-[54px] lg:text-[110px]">
                 paymint
-              </div>
+              </FadeInDiv>
             </div>
           </div>
 
@@ -62,7 +63,7 @@ export default function Paymint() {
               <div className="border-b w-[45px] border-b-black" />
             </div>
             <div className="flex gap-16 flex-col lg:flex-row text-center">
-              <div className="flex flex-col items-center max-w-[340px]">
+              <FadeInDiv className="flex flex-col items-center max-w-[340px]">
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="27"
@@ -84,8 +85,11 @@ export default function Paymint() {
                   the project, even in the presentation of information on the
                   homepage and within the documentation.
                 </div>
-              </div>
-              <div className="flex flex-col items-center max-w-[340px]">
+              </FadeInDiv>
+              <FadeInDiv
+                delayFactor={1}
+                className="flex flex-col items-center max-w-[340px]"
+              >
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="27"
@@ -108,8 +112,11 @@ export default function Paymint() {
                   design&apos;s performance and responsiveness key factors for
                   user satisfaction.
                 </div>
-              </div>
-              <div className="flex flex-col items-center max-w-[340px]">
+              </FadeInDiv>
+              <FadeInDiv
+                delayFactor={2}
+                className="flex flex-col items-center max-w-[340px]"
+              >
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="26"
@@ -131,31 +138,31 @@ export default function Paymint() {
                   documentation was essential to make complex cryptocurrency
                   concepts accessible to all users.
                 </div>
-              </div>
+              </FadeInDiv>
             </div>
           </div>
           {/* discovery & research */}
           <div className="px-4 mb-32 flex flex-col lg:px-14 lg:mx-auto max-w-[1500px] items-center lg:items-start">
             <div className="max-w-md mb-32">
-              <div className="font-bold uppercase flex flex-col mb-6">
+              <FadeInDiv className="font-bold uppercase flex flex-col mb-6">
                 Discovery & Research
                 <div className="border-b w-[45px] border-b-white" />
-              </div>
-              <div>
+              </FadeInDiv>
+              <FadeInDiv delayFactor={1}>
                 Understanding Paymint&apos;s core values and objectives was
                 instrumental in creating an effective design for both the
                 homepage and documentation.
-              </div>
+              </FadeInDiv>
             </div>
             <div className="flex flex-col gap-32 ">
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Logo Design</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">Logo Design</FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     The logo&apos;s elements were chosen to convey trust,
                     security, and forward movement, aligning with Paymint&apos;s
                     values.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -168,12 +175,14 @@ export default function Paymint() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Color Palette</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">
+                    Color Palette
+                  </FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     The chosen colors were consistently applied to maintain
                     brand recognition across the homepage and documentation,
                     fostering a unified brand identity.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -186,12 +195,12 @@ export default function Paymint() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Typography</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">Typography</FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     A clean, sans-serif font was chosen for both the homepage
                     and documentation to ensure readability, professionalism,
                     and a modern aesthetic.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -207,16 +216,16 @@ export default function Paymint() {
           {/* ui design */}
           <div className="px-4 mb-32 flex flex-col lg:px-14 lg:mx-auto max-w-[1500px] items-center lg:items-start">
             <div className="max-w-md mb-32">
-              <div className="font-bold uppercase flex flex-col mb-6">
+              <FadeInDiv className="font-bold uppercase flex flex-col mb-6">
                 UI Design
                 <div className="border-b w-[45px] border-b-white" />
-              </div>
-              <div>
+              </FadeInDiv>
+              <FadeInDiv delayFactor={1}>
                 In conclusion, my role in the Paymint project focused on the
                 UI/UX design and development for the homepage and documentation,
                 which contributed to conveying Paymint&apos;s values while
                 simplifying complex cryptocurrency processes for users.
-              </div>
+              </FadeInDiv>
             </div>
             <div className="flex flex-col gap-4 items-center w-full">
               <FadeInImage

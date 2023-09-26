@@ -1,3 +1,4 @@
+import FadeInDiv from "@/components/FadeInDiv";
 import Navbar from "@/components/navbar/Navbar";
 import FadeInImage from "@/components/pages/FadeInImage";
 import Footer from "@/components/sections/Footer";
@@ -30,9 +31,9 @@ export default function Ignite() {
               priority
             />
             <div className="absolute inset-0 flex justify-center items-center">
-              <div className="font-bold uppercase text-[32px] lg:text-[110px] sm:text-[54px]">
+              <FadeInDiv className="font-bold uppercase text-[32px] lg:text-[110px] sm:text-[54px]">
                 ignite hosting
-              </div>
+              </FadeInDiv>
             </div>
           </div>
 
@@ -63,7 +64,7 @@ export default function Ignite() {
               <div className="border-b w-[45px] border-b-black" />
             </div>
             <div className="flex gap-16 flex-col lg:flex-row text-center">
-              <div className="flex flex-col items-center max-w-[340px]">
+              <FadeInDiv className="flex flex-col items-center max-w-[340px]">
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="27"
@@ -84,8 +85,11 @@ export default function Ignite() {
                   The VPS hosting space is crowded, with many established
                   players offering similar services.
                 </div>
-              </div>
-              <div className="flex flex-col items-center max-w-[340px]">
+              </FadeInDiv>
+              <FadeInDiv
+                delayFactor={1}
+                className="flex flex-col items-center max-w-[340px]"
+              >
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="27"
@@ -106,8 +110,11 @@ export default function Ignite() {
                   Catering to both tech-savvy individuals and those less
                   acquainted with hosting services.
                 </div>
-              </div>
-              <div className="flex flex-col items-center max-w-[340px]">
+              </FadeInDiv>
+              <FadeInDiv
+                delayFactor={2}
+                className="flex flex-col items-center max-w-[340px]"
+              >
                 <div className="font-bold flex gap-2 items-center mb-6">
                   <svg
                     width="26"
@@ -128,29 +135,29 @@ export default function Ignite() {
                   Given the nature of the business, ensuring users felt safe and
                   confident in the platform was paramount.
                 </div>
-              </div>
+              </FadeInDiv>
             </div>
           </div>
           {/* discovery & research */}
           <div className="px-4 mb-32 flex flex-col lg:px-14 lg:mx-auto max-w-[1500px] items-center lg:items-start">
             <div className="max-w-md mb-32">
-              <div className="font-bold uppercase flex flex-col mb-6">
+              <FadeInDiv className="font-bold uppercase flex flex-col mb-6">
                 Discovery & Research
                 <div className="border-b w-[45px] border-b-white" />
-              </div>
-              <div>
+              </FadeInDiv>
+              <FadeInDiv delayFactor={1}>
                 The initial phase involved deep market research to understand
                 the gaps in existing services and the needs of potential users.
-              </div>
+              </FadeInDiv>
             </div>
             <div className="flex flex-col gap-32 ">
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Logo Design</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">Logo Design</FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     Crafting a simple yet memorable logo that conveyed the
                     essence of ignition and innovation.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -163,12 +170,14 @@ export default function Ignite() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Color Palette</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">
+                    Color Palette
+                  </FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     A blend of fiery reds and oranges combined with cooler blues
                     and greys to convey passion, reliability, and technical
                     prowess.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -181,11 +190,11 @@ export default function Ignite() {
               </div>
               <div className="flex gap-12 justify-normal flex-col lg:flex-row items-center lg:items-start  lg:justify-between">
                 <div className="max-w-sm">
-                  <div className="font-bold mb-6">Typography</div>
-                  <div>
+                  <FadeInDiv className="font-bold mb-6">Typography</FadeInDiv>
+                  <FadeInDiv delayFactor={1}>
                     A modern, sleek typeface that&apos;s easy on the eyes,
                     ensuring readability across devices.
-                  </div>
+                  </FadeInDiv>
                 </div>
                 <div className="border rounded-3xl border-white p-6">
                   <FadeInImage
@@ -201,16 +210,16 @@ export default function Ignite() {
           {/* ui design */}
           <div className="px-4 mb-32 flex flex-col lg:px-14 lg:mx-auto max-w-[1500px] items-center lg:items-start">
             <div className="max-w-md mb-32">
-              <div className="font-bold uppercase flex flex-col mb-6">
+              <FadeInDiv className="font-bold uppercase flex flex-col mb-6">
                 UI Design
                 <div className="border-b w-[45px] border-b-white" />
-              </div>
-              <div>
+              </FadeInDiv>
+              <FadeInDiv delayFactor={1}>
                 Starting with low-fidelity mockups, ideas were tested and
                 iterated upon to form the blueprint of the final design.
                 Ensuring the platform&apos;s adaptability across devices,
                 especially mobile, considering the increasing mobile user base.
-              </div>
+              </FadeInDiv>
             </div>
             <div className="flex flex-col gap-4 items-center">
               <FadeInImage

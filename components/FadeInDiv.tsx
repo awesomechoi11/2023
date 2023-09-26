@@ -10,6 +10,7 @@ type FadeInDivProps = {
   animate?: AnimationProps["animate"];
   style?: any;
   show?: boolean;
+  delayFactor?: number;
 };
 
 const FadeInDiv: React.FunctionComponent<FadeInDivProps> = ({
@@ -18,6 +19,7 @@ const FadeInDiv: React.FunctionComponent<FadeInDivProps> = ({
   animate,
   style,
   show = true,
+  delayFactor = 0,
 }) => {
   if (!Array.isArray(className)) className = [className];
   const ref = useRef(null);
@@ -34,6 +36,7 @@ const FadeInDiv: React.FunctionComponent<FadeInDivProps> = ({
           transition: {
             ease: [0.17, 0.67, 0.31, 0.99],
             duration: 1.3,
+            delay: 0.07 * delayFactor,
           },
         })
       }
