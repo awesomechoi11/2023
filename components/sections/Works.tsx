@@ -1,15 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import FadeInDiv from "../FadeInDiv";
 import { relativePercent } from "../utils/math";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState } from "react";
 
 export default function Works() {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-
   return (
     <div id="works" className="px-6 mx-auto max-w-[1600px] relative z-0">
       <FadeInDiv className="mb-32 mt-32 transform-gpu relative">
@@ -71,6 +70,10 @@ const FlippableCase = ({
   href: string;
   disabled?: boolean;
 }) => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  // overrides flip status
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
     <FadeInDiv className="mb-32 max-[1224px]:mb-24 max-[624px]:mb-12 pt-16 h-[400px] max-[1224px]:h-[400px] max-[624px]:h-[300px] max-[424px]:h-[250px] relative">
       <motion.div
@@ -82,6 +85,7 @@ const FlippableCase = ({
         className="w-full z-[1] absolute inset-0 "
         initial="hidden"
         whileHover="flipped"
+        animate={isTabletOrMobile && isInView && "flipped"}
       >
         <Link href={disabled ? "#" : href} className="absolute inset-0"></Link>
         <motion.div
@@ -176,9 +180,14 @@ const FlippableCase = ({
         style={{
           fontSize: `${relativePercent(fontScale)}vw`,
         }}
-        className="text-white pointer-events-none opacity-0 text-center font-bold font-['Gilroy'] uppercase"
+        className="text-white pointer-events-none opacity-0 text-center relative font-bold font-['Gilroy'] uppercase"
       >
         {text}
+        {isTabletOrMobile && (
+          <div ref={ref} className="absolute inset-0 translate-y-[45vh]">
+            {/* dummy trigger for mobile */}
+          </div>
+        )}
       </div>
     </FadeInDiv>
   );

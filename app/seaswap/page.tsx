@@ -5,6 +5,8 @@ import Footer from "@/components/sections/Footer";
 import Image from "next/image";
 
 export const metadata = {
+  metadataBase: new URL("https://bmschoi.dev"),
+
   twitter: {
     card: "summary_large_image",
     title: "BMSCHOI - 2023 Portfolio",

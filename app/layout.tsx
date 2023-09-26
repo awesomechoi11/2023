@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bmschoi.dev"),
+
   title: "BMSCHOI - 2023 Portfolio",
   description: "Front-End Developer Portfolio for 2023.",
   keywords: ["Next.js", "React", "JavaScript", "ThreeJS", "FramerMotion"],
